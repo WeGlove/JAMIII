@@ -11,6 +11,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * Implements a GUI class for a Pong game.
+ * Listens to w, s, o and l keys.
+ * @author WeGlove
+ *
+ */
 public class GameGUIImplementation implements GameGUI {
 
 	JFrame Frame;
