@@ -71,5 +71,70 @@ int [] ball;
 	
 	}
 	
+	public void SetBalls (int x , int y) throws Exception {
+		if ((x < w ) && (y < h))
+		{
+			board [x] [y] = false;
+			board [ball [0]]  [ball [1]] = false;
+			ball [0] = x;
+			ball [1] = y;
+		}
+		else 
+			throw new Exception ();
+	}
+	
+	public void SetPanels (boolean Panel, int direction) throws Exception
+	{int x, y, Index;
+		if (Panel)
+		{   Index = panelsize;
+			x = Panelright [0];
+			y = Panelright [1];
+					
+					
+				if ( x - direction < 0)
+					throw new Exception ();
+				if (x + direction > h)
+					throw new Exception ();
+					
+				 
+				
+				
+					while (Index > 0)
+					{
+						board [x] [y + Index -1] = false;
+						board [x] [y + direction + Index - 1] = true;
+						Index--;
+						
+					}
+					Panelright [1] = Panelright [1] + direction;
+				
+					
+			}
+		else
+		{
+			Index = panelsize;
+			x = Panelleft [0];
+			y = Panelleft [1];
+					
+					
+				if ( x - direction < 0)
+					throw new Exception ();
+				if (x + direction > h)
+					throw new Exception ();
+					
+				 
+				
+				
+					while (Index > 0)
+					{
+						board [x] [y + Index -1] = false;
+						board [x] [y + direction + Index - 1] = true;
+						Index--;
+						
+					}
+					Panelleft [1] = Panelleft [1] + direction;
+		}
+		
+	}
 	
 }
