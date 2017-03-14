@@ -4,8 +4,10 @@ import java.awt.image.BufferedImage;
 
 public class GameThreadImplementation implements Runnable {
 
+	BufferedImage BImg;
+	
 	public GameThreadImplementation(BufferedImage BImg){
-		
+		this.BImg=BImg;
 	}
 	
 	@Override
@@ -20,7 +22,7 @@ public class GameThreadImplementation implements Runnable {
 	}
 	
 	public void LeftPaddleUp(){
-		
+		BImg.setRGB(2, 2, 0x00ffffff);
 	}
 	
 	public void RightPaddleUp(){
