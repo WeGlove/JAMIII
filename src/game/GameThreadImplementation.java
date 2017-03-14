@@ -40,7 +40,7 @@ public class GameThreadImplementation implements Runnable {
 	}
 	
 	public void RightPaddlehalt(){
-		
+		//
 	}
 
 }
